@@ -14,7 +14,6 @@ server.post('/videos', (req, res) => {
 //listando videos
 server.get('/videos', (req, reply) => {
   const { search } = req.query
-  console.log(search)
   const videos = database.list(search)
   return videos
 })
@@ -26,8 +25,6 @@ server.put('/videos/:id', (req, reply) => {
   database.update(id, { name, description, duration })
   return reply.status(201).send()
 })
-
-
 
 server.delete('/videos/:id', (request, reply) => {
   const { id } = request.params
