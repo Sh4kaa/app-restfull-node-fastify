@@ -21,8 +21,9 @@ export class DataBasePostgres {
     await sql`insert into videos (id, name, description, duration) VALUES (${videoId}, ${name}, ${description}, ${duration})`
   }
 
-  update(id, video) {
-
+  async update(id, video) {
+    const { name, description, duration } = video
+    await sql`update videos set name = ${name}, description = ${description}, duration = ${duration} WHERE id = ${id}`
   }
 
   delete(id) {
