@@ -8,7 +8,7 @@ export class DataBasePostgres {
   async list(search) {
     let videos
     if (search) {
-      videos = await sql`select * from videos where name ilike "%${search}%"`
+      videos = await sql`select * from videos where name ilike ${'%' + search + '%'}`
     } else {
       videos = await sql`select * from videos`
     }
