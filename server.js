@@ -28,9 +28,9 @@ server.put('/videos/:id', async (req, reply) => {
   return reply.status(204).send()
 })
 
-server.delete('/videos/:id', (request, reply) => {
+server.delete('/videos/:id', async (request, reply) => {
   const { id } = request.params
-  database.delete(id)
+  await database.delete(id)
   return reply.send()
 })
 
