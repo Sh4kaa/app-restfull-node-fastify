@@ -1,6 +1,9 @@
 ## Projeto Node.js com Fastify e Postgres
  - Nesse projeto fiz um CRUD básico utilizando banco de dados postgres em nuvem e o back-end rodando localmente
 Esse banco foi criado no neon.tech onde posso criar uma conta gratuita e ter acesso ao banco sql
+####
+- URL da api
+  https://api-node-xsae.onrender.com/videos
 #### Instalação das dependências:
 ```
 npm install
