@@ -7,7 +7,7 @@ const server = fastify()
 const database = new DataBasePostgres
 
 server.get('/', async (req, res) => {
-  return res.status(200).send()
+  return res.status(200).send('App is Work')
 })
 
 // Criando video
