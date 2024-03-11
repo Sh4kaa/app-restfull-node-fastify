@@ -6,6 +6,10 @@ const server = fastify()
 //const database = new DataBaseMemory()
 const database = new DataBasePostgres
 
+server.get('/', async (req, res) => {
+  return res.status(200).send()
+})
+
 // Criando video
 server.post('/videos', async (req, res) => {
   const { name, description, duration } = req.body
